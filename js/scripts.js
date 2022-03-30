@@ -101,7 +101,8 @@ $(function(){
 
 
 /* ********************   Carousel Testimonials  ***************** */    
-    $(window).load(function() {
+//$(window).on('load', function(){ ...});
+    $(window).on('load', function() {
         var $items = $('.carousel[data-type="multi"] .item'),            /* grab all slides in carousel */
             heights = [],                                                /* create empty array to store height values */
             tallest;                                                     /* create variable to make note of the tallest slide */
