@@ -138,7 +138,8 @@ a.navbar-brand{
 /* ************ CALL FOR ACTION **************** */
 .call-for-action{
     position: relative;
-    font-family: 'Parisienne', cursive;
+    /*font-family: 'Parisienne', cursive;*/
+    font-family: 'Abel', sans-serif;
     margin-top: 40px;
     padding: 15px 0;
     border: 1px solid #d9d9d9;    
@@ -146,7 +147,8 @@ a.navbar-brand{
 
 .call-for-action h3{
     color: #ff7e00;
-    font: 45px 'Parisienne', sans-serif;
+    /*font: 45px 'Parisienne', sans-serif;*/
+    font-family: 'Abel', sans-serif;
     padding-left: 10px;
     letter-spacing: 1px;
 }
