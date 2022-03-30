@@ -1000,8 +1000,7 @@ a.navbar-brand{
     .bottom ul{
         float: left;
         margin-top: 5px;
-        /*padding-left: 0 !important; */
-        padding-left: 0;
+        padding-left: 0 !important;
     }
     
 } /* end media 767px */
