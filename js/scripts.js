@@ -23,17 +23,17 @@ var swiper = new Swiper('.swiper-container', {
 $(function(){
 
 	      /* ********* Change opacity on mouseenter and mouseleave ************* */   		
-  	$('#features .panel-body img, .live-chat .call-us, .phone img').on('mouseenter', function(){
+  	$('.live-chat .call-us, .phone img').on('mouseenter', function(){
 		    $(this).css({
 			     'cursor' : 'pointer',
-			     'opacity': '0.9'
+			     'opacity': '0.9'         
 		    });
 	  });
 
-	  $('#features .panel-body img, .live-chat .call-us, .phone img').on('mouseleave', function(){
+	  $('.live-chat .call-us, .phone img').on('mouseleave', function(){
 		    $(this).css({
 			     'cursor' : 'default',
-			     'opacity': '1'
+			     'opacity': '1'                 
 		    });
 	  });
     

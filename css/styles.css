@@ -247,6 +247,11 @@ a.navbar-brand{
     padding: 15px 0;
 }
 
+#features .panel-body img:hover{
+    
+    transform: scale(1.05);
+}
+
 #features .panel-body p{
     margin-top: 10px;
     font-size: 14px;
@@ -685,6 +690,27 @@ a.navbar-brand{
 /* *********************************************** */
 /* ****************  MEDIA QUERIES *************** */
 /* *********************************************** */
+@media (min-width: 320px){
+    #footer ul{
+        padding-left: 0;     
+    }
+
+    .call-for-action .col-xs-12 h3{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1200px){
+    .call-for-action .col-xs-12 h3 {
+        font-size: 40px;
+        text-align: center;
+    }
+    .call-for-action .arrow{
+        left: 90%;
+    }
+}
+
 @media (max-width: 1199px){
     .navbar-nav{
         margin-top: 10px;
@@ -832,6 +858,13 @@ a.navbar-brand{
     .bottom .col-sm-6{ padding-right: 0 ; }
 }         /* *************  end media 991px ******************** */
 
+
+@media (min-width: 992px){
+    .call-for-action .col-xs-12 h3 {
+        padding-left: 0;
+        text-align: left;
+    }
+}
 @media (max-width: 767px) {
     /* ***********************  NAVIGATION  **************** */ 
     .navbar-nav{ margin: 0;}
@@ -902,7 +935,7 @@ a.navbar-brand{
     }
 
     .call-for-action .col-xs-12 h3 {
-        margin: 10px auto 0 auto;
+        margin: 10px auto 15px auto;
         font-size: 28px;
     }
 
