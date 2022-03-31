@@ -1,26 +1,27 @@
-/* *****************  Create swiper object ****************** */
-var swiper = new Swiper('.swiper-container', {
-                 effect: 'coverflow',
-                 grabCursor: true,
-                 centeredSlides: false,
-                 slidesPerView: '3',
-                 coverflowEffect: {
-                     rotate: 40,
-                     stretch: 1,
-                     depth: 50,
-                     modifier: 1,
-                     slideShadows : true,
-                  },
-                 pagination: {
-                     el: '.swiper-pagination',
-                 },
-              });
-
-
-
+             
 /* *************************  Document Ready  *********************** */
 
 $(function(){
+    
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:20,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            500:{
+                items:2
+            },
+            700:{
+                items:3
+            },
+            1000:{
+                items:4
+            }
+        }
+    });
 
 	      /* ********* Change opacity on mouseenter and mouseleave ************* */   		
   	$('.live-chat .call-us, .phone img').on('mouseenter', function(){
@@ -141,23 +142,4 @@ $(function(){
             
 
     }); // end window load
-    
-
- /* **************** Nr images in swiper based on resize window ******************** */
-
-            $(window).on('load resize', function(){
-            var win = $(this); //this = window
-      
-                if ( win.width() <= 480 ) {
-                    swiper.params.slidesPerView = '2';  
-                }
-
-                else if ( ( win.width() > 480 ) && ( win.width() <= 991 ) ){
-                  swiper.params.slidesPerView = 'auto';
-                }
-            
-            else if (win.width() > 991){
-              swiper.params.slidesPerView = '3';
-            }
-      });    /* end if items length */          
     

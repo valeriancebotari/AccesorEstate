@@ -1,14 +1,66 @@
 /* ********************  CUSTOM STYLES  ********************* */
+
+/*@charset "UTF-8"; */
+
+/*@font-face {
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
+	font-named-instance: 'Regular';
+	src: url("../fonts/Roboto-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-weight: 600;
+	font-display: swap;
+	font-style: normal;
+	font-named-instance: 'Bold';
+	src: url("../fonts/Roboto-Bold.woff2") format("woff2");
+}*/
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+         url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Abel';
+    src: url('../fonts/Abel-Regular.woff2') format('woff2'),
+         url('../fonts/Abel-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*, *::before, *::after{
+     box-sizing: border-box;
+}
+
+/*html { font-family: 'Montserrat', Trebuchet, sans-serif; font-size: 16px; line-height: 1.5em; } */
+html {    
+    font-size: 16px;
+}
+
 body{
+    display: block;
+    min-height: 100vh;
     background: #f4f4f4;
-    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+    font-family: 'Roboto Regular', sans-serif;
+    text-rendering: optimizeSpeed;
     color:#000;
     margin: 0;
     padding: 0;    
 }
 
-h3{
-    font-family: 'Roboto', sans-serif;
+h1, h2, h3, h4{
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Roboto Regular', sans-serif;
 }
 
 ul {
@@ -34,20 +86,20 @@ button{
 }
 
 .orange{
-    color: #ff7e00;
+    color: #ff5e00;
 }
 
 .tooltip-inner {  
-    padding: 5px 8px;
+    padding: 0.3125rem 0.5rem;
     color: #fff;  
     background-color: #222;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     border-color: #000;
 }
 
 /* *************** NAVBAR ******************** */
 .navbar{
-    min-height: 70px;
+    min-height: 4.375rem;
     border: none;
 }
 
@@ -57,53 +109,83 @@ button{
 }
 
 .navbar-default .navbar-nav>li{
-    padding: 10px;
+    padding: 0.625rem;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #222;
+    font-family: 'Abel', sans-serif;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    font-family: 'Abel', sans-serif;
 }
 
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover{
-    color: #555;
+    color: #222;
     background-color: #fff;  
 }
 
 .navbar-default .navbar-nav>li.active,
 .navbar-default .navbar-nav>li:hover{
-    border-bottom: 2px solid #ff7e00;
+    border-bottom: 2px solid #ff5e00;
 }
 
 .nav.navbar-nav a{
-    font: 20px 'Abel', sans-serif;    
+    /*font: 20px 'Abel', sans-serif;    */
+    font-size: 1.25rem;
 }
 
-.h2-main{
-    font: 35px 'Abel', sans-serif;
-    color: #ff7e00;
+.main-head{
+    /*font: 35px 'Abel', sans-serif;*/
+    font-family: 'Roboto Regular', sans-serif;
+    letter-spacing: -1px;
+    font-size: 2.25rem;
+    color: #ff5e00;
 }
 
-.h2-main span{
+.main-head span{
     font-weight: bold;
 }
 
 a.navbar-brand{
-    padding-top: 10px;
+    padding-top: 0.625rem;
 }
 
 /* ************  SWIPER  ************** */
 .swiper-container {
     width: 100%;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 3.125rem 0;
 }
 
-.swiper-slide {
+.swiper-container .item{
+    box-shadow: 0 0.3rem 0.3rem rgba(0,0,0,0.5);
+}
+
+.swiper-container img{
+    transition: transform 0.3s ease-in;
+}
+
+.swiper-container img:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: 0 0.4rem 0.4rem rgba(0,0,0,0.6);
+}
+.SliderImage { display: block; }
+.SliderImage img { display: block; width: 100%; height: auto; }
+/*.swiper-slide {
     background-position: center;
     background-size: cover;
     width: 250px;
     height: 250px;
-}
+}*/
 
-.swiper-wrapper #swiper1{
+/* .swiper-wrapper #swiper1{
     background-image: url('../img/swiper/01.jpg');
 }
 
@@ -133,24 +215,23 @@ a.navbar-brand{
 
 .swiper-wrapper #swiper8{
     background-image: url('../img/swiper/08.jpg');
-}
-
+} 
+ */
 /* ************ CALL FOR ACTION **************** */
 .call-for-action{
     position: relative;
-    /*font-family: 'Parisienne', cursive;*/
-    font-family: 'Abel', sans-serif;
-    margin-top: 40px;
-    padding: 15px 0;
+    margin-top: 2.5rem;
+    padding: 1rem 0;
     border: 1px solid #d9d9d9;    
 }
 
-.call-for-action h3{
-    color: #ff7e00;
+.call-for-action h2{
+    color: #ff5e00;
     /*font: 45px 'Parisienne', sans-serif;*/
-    font-family: 'Abel', sans-serif;
-    padding-left: 10px;
+    /*font-family: 'Abel', sans-serif;*/
+    padding-left: 0.625rem;
     letter-spacing: 1px;
+    font-size: 2.2rem;
 }
 
 .call-for-action .arrow{
@@ -163,7 +244,8 @@ a.navbar-brand{
 }
 
 .call-for-action button{
-    font: bold 28px Helvetica, sans-serif;
+    /*font: bold 28px 'Roboto Bold', sans-serif;*/
+    font-size: 28px;
     text-shadow: 0 -1px 1px #744b1a;   
     border: 2px solid #f58026;
     border-radius: 5px;
@@ -240,16 +322,20 @@ a.navbar-brand{
     border: 1px solid #d9d9d9;
     background: #fff;
 }
+#features .panel-body > div:hover{
+    cursor: pointer;
+}
 
 #features .panel-body img{
     display:block; 
     margin: auto; 
-    padding: 15px 0;
+    padding: 1.5rem 0;
 }
 
 #features .panel-body img:hover{
     
     transform: scale(1.05);
+    
 }
 
 #features .panel-body p{
@@ -259,7 +345,7 @@ a.navbar-brand{
 }
 
 #features .panel-body a{
-    color: #ff7e00;
+    color: #ff5e00;
     float: right;
     display: list-item;          /* This has to be "list-item"                                               */
     list-style-type: disc;       /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
@@ -472,7 +558,7 @@ a.navbar-brand{
 
 #testimonial .phone h4{
     margin-bottom: 5px;
-    color: #555;
+    color: #222;
     text-transform: uppercase;    
     font-weight: bold;    
 }
@@ -480,7 +566,7 @@ a.navbar-brand{
 .phone p{
     margin: 0 0 5px 0;
     padding: 0;
-    font: bold 16px/18px 'Helvetica Neue', Helvetica, Arial, sans-serif;    
+    font: bold 16px/18px 'Roboto Regular', Helvetica, Arial, sans-serif;    
 }
 
 .phone img{
@@ -510,7 +596,7 @@ a.navbar-brand{
 }
 
 .latest-tweets li.active a{
-    background-color: #ff7e00;
+    background-color: #ff5e00;
 }
 
 .tweets-container{
@@ -522,7 +608,7 @@ a.navbar-brand{
 }
 
 .tweets-container .to-person{
-    color: #ff7e00;
+    color: #ff5e00;
     font-size: 14px;
     font-weight: bold;
 }
@@ -542,7 +628,7 @@ a.navbar-brand{
     padding: 0;  
     font-size: 14px;
     line-height: 1.8em;
-    color: #555;
+    color: #222;
 }
 
 .recent-tweet .arrow-down {
@@ -568,7 +654,7 @@ a.navbar-brand{
     padding: 5px 0;
     font: 1.3em/1.7em Arial, Helvetica, sans-serif;
     text-align: center;    
-    color: #555; 
+    color: #222; 
 }
 
 #footer .container{
@@ -584,13 +670,14 @@ a.navbar-brand{
 
 #footer h4{
     margin-top: 20px;
+    padding-left: 0;
     font-size: 16px;
     font-weight: bold;    
 }
 
 #footer ul a{
     font-size: 14px;
-    color: #555;
+    color: #222;
     text-decoration: underline;
 }
 
@@ -653,7 +740,7 @@ a.navbar-brand{
     margin-top: 20px;
     padding: 10px 20px 5px 20px;  
     background-color: #3b3b3b; 
-    font-family: 'Abel', sans-serif;
+    /*font-family: 'Abel', sans-serif;*/
     text-align: left;
 }
 
@@ -674,7 +761,7 @@ a.navbar-brand{
 }
 
 .modal .btn-primary{
-    background-color: #ff7e00;
+    background-color: #ff5e00;
     border-color: #fd8209;
 }
 
@@ -721,8 +808,8 @@ a.navbar-brand{
         padding: 10px 0;
     }
 
-    .call-for-action h3{
-        font-size: 35px;
+    .call-for-action h2{
+        font-size: 1.8rem;
     }
 
     .call-for-action .arrow{
@@ -769,7 +856,7 @@ a.navbar-brand{
 
     .nav.navbar-nav a{ font-size: 18px; }
     
-    .h2-main{
+    .main-head{
         font-size: 30px;
         margin: 10px 0 0 0;
     }
@@ -777,9 +864,10 @@ a.navbar-brand{
     /* ******************  CALL FOR ACTION   ************** */ 
     .call-for-action{  padding: 0 0 5px 0; }
 
-    .call-for-action h3{
-        font-size: 29px;
+    .call-for-action h2{
+        font-size: 1.7rem;
         padding-left: 0;
+        letter-spacing: -1px;
     }
 
     .call-for-action button{
@@ -875,14 +963,14 @@ a.navbar-brand{
     }
 
     .navbar-default .navbar-nav>li>a{
-        color:#555;
+        color:#222;
     }
 
     .navbar-default .navbar-nav>.active>a,
     .navbar-default .navbar-nav>.active>a:hover,
     .navbar-default .navbar-nav>li>a:hover,
     .navbar-default .navbar-nav>li>a:focus{
-        color: #333;
+        color: #111;
         background-color: #e9e9e9;
     }
 
@@ -892,7 +980,7 @@ a.navbar-brand{
     }
 
      .navbar-default .navbar-toggle{
-        background-color: #ff7e00;
+        background-color: #ff5e00;
         border-color: #ea7502;
     }
 
@@ -916,16 +1004,18 @@ a.navbar-brand{
     }
 
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-        color:#555;
+        color:#222;
+        font-family: 'Abel', sans-serif;
     }
 
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-        color: #333;
+        color: #111;
         background-color: #eaeaea;
+        font-family: 'Abel', sans-serif;
     }
     
-    .h2-main{ font-size: 28px; }
+    .main-head{ font-size: 28px; }
 
     /* *****************    CALL FOR ACTION    ******************** */
     .call-for-action{
@@ -1053,7 +1143,7 @@ a.navbar-brand{
         margin-right: 10px;
     }
 
-    .h2-main{ 
+    .main-head{ 
         font-size: 25px; 
         margin-top: 5px;
     }
